@@ -1,0 +1,180 @@
+Can you tell something about Azure Cloud Service?
+
+Azure Cloud Service is a classic example of a platform as a service (PaaS). 
+This was designed to support those applications which demand high scalability, 
+reliability, and availability all within the constraints of reduced cost of operations.
+These are hosted on virtual VMs and Azure provides more control over them by letting
+ the developers install the necessary software and enabling them to control remotely.
+Azure cloud services are used for deploying multi-tier web-based applications in Azure by means of creating an instance of cloud service. 
+It is also possible to define multiple roles such as web roles, worker roles, etc for the purpose of distributed processing. 
+Azure cloud services help in the easier and flexible scalability of the application.
+
+
+----------------------------------------------------------------------------------------------------
+
+What are the various models available for cloud deployment?
+
+*Public Cloud: In this model, the cloud infrastructure is owned publicly by the cloud provider and 
+there are chances that the server resources could be shared between multiple applications.
+
+*Private Cloud: Here, the cloud infrastructure is owned exclusively by us or exclusive service is provided by the cloud provider to us.
+This includes hosting our applications on our own on-premise servers or hosting
+the application on a dedicated server provided by the cloud provider.
+
+*Hybrid Cloud: As the name itself says, this model is the hybrid combination of private cloud and the public cloud.
+This might include the scenario of using on-premise servers for processing confidential, 
+sensitive data and using public cloud features for hosting public-facing applications.
+
+-----------------------------------------------------------------------------------------------------------
+
+What are the different DevOps solution architectures?
+
+Multiple tools and technologies can be leveraged with Azure to design solution architectures for the below DevOps scenarios:
+
+CI/CD for Azure VMs
+CI/CD for Azure Web Apps
+CI/CD for containers
+DevTest image factory
+Using Azure Web Apps and Jenkins for Java CI/CD 
+Using Jenkins and Terraform on Azure Virtual Architecture for immutable infrastructure CI/CD 
+Using Jenkins and Kubernetes on Azure Kubernetes Service for Container CI/CD 
+
+--------------------------------------------------------------------------------------------------------------------
+
+How many cloud service roles are provided by Azure?
+
+Cloud service roles comprise a set of application and configuration files. There are 2 kinds of roles provided by Azure:
+
+*Web role: This provides a dedicated web server belonging to IIS (Internet Information Services)
+that is used for automatic deployment and hosting of front-end websites.
+
+*Worker role: These roles help the applications hosted within them to run asynchronously for longer durations
+and are independent of the user interactions and generally do not use IIS. They are also ideal for performing background processes.
+ The applications are run in a standalone manner.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+6. Why is Azure Diagnostics API needed?
+
+Azure Diagnostics API helps us collect diagnostic data such as performance monitoring, system event logs,
+ etc from the applications that are running on Azure.
+For the verbose monitoring of the data, Azure Diagnostics has to be enabled for the cloud service roles.
+The diagnostics data can be used for building visual chart representations for better monitoring
+ and also for creating performance metric alerts.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Define Azure Service Level Agreement (SLA)?
+
+The Azure SLA is a contract that ensures or guarantees that when two or more role instances of a role are deployed on Azure, 
+access to that cloud service is guaranteed for at least 99.95% of the time.
+It also states that if the role instance process is not in the running state,
+ then the detection of such processes and corrective action for the same will be taken 99.9% percent of the time.
+If the mentioned guarantees are not satisfied at any point in time, then Azure credits a percentage 
+of monthly fees to us depending on the pricing model of the respective Azure services
+
+---------------------------------------------------------------------------------------------------------------
+What are Azure Test Plans?
+
+Azure Test Plans is a service provided by Azure DevOps. 
+It provides a browser-based test management solution along with crucial capabilities in user acceptance testing, 
+exploratory testing, and planned manual testing. It also includes a browser extension for the provision of exploratory
+testing as well as feedback from stakeholders.
+
+Exploratory and manual testing are critical methods that consist of the evaluation of product or service quality.
+
+Azure Test Plans, additionally, focus on DevOps on automated testing. It combines the contributions from 
+developers, managers, testers, product owners, and user experience advocates and enhances the quality of a project
+
+-----------------------------------------------------------------------------------------------------
+Define azure storage key.
+
+Azure storage key is used for authentication for validating access for the azure storage service 
+to control access of data based on the project requirements.
+2 types of storage keys are given for the authentication purpose -
+Primary Access Key
+Secondary Access Key
+The main purpose of the secondary access key is for avoiding downtime of the website or application.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Is it possible to login to a Linux Virtual Machine without using a password?
+
+Yes, it is possible by making use of the Key Vault mapping to any Admin VM, 
+we can log in to another VM without the need for a password
+
+------------------------------------------------------------------------------------------------------------
+
+What are IaaS, PaaS and SaaS?
+
+*IaaS: This stands for “Infrastructure as a Service” which provides a set of capabilities like OS, 
+network connectivities, etc which are at the infrastructural level and are delivered as pay per use policy. 
+The infrastructure is used for hosting applications. Examples include Azure VM, VNET, etc.
+
+*PaaS: PaaS stands for “Platform as a Service” which is mostly about underlying infrastructure abstraction
+ to the developers for enabling quicker development of the applications without the need for worry about hosting management.
+ Examples include Azure web apps, Storage services, cloud services, etc.
+
+*SaaS: SaaS stands for “Software as a Service” and are those applications which are delivered using
+ the service delivery model where the applications are simply consumed and used by an organization. 
+ These applications are generally mobilized by making the organization pay for their usage or through ads. 
+ Examples include applications like Office 365, Gmail, SharePoint Online, and so on.
+ 
+ 
+----------------------------------------------------------------------------------------------
+
+How can a VM be created by means of Azure CLI?
+
+az vm create `   
+--resource-group myResourceGroupName `   
+--name myVM --image win2016datacenter `   
+--admin-username AzureuserNAME `   
+--admin-password AzurePASSWORD
+
+------------------------------------------------------
+
+How to check if the previous command was run successfully?
+
+#!/bin/sh
+var=$?
+if var=0
+then
+echo "Script was Run successfully"
+
+else
+echo "Script was unsuccessful"
+fi
+----------------------------------------------------------
+How to write a function?
+#!/bin/sh
+
+function example {
+echo "Hello Learner"
+}
+-------------------------------------------------
+Q20. Write down the Syntax for all the loops in Shell Scripting.
+
+*For Loop:
+
+for var in word1 word2 ... wordN
+do
+   Statement(s) to be executed for every word.
+done
+
+*While Loop:
+
+while command
+do
+   Statement(s) to be executed if command is true
+done
+
+------------------------------------------------------------------------------------------------
+
+How to print all array elements and their respective indexes?
+
+!/bin/sh
+array=("This" "is" "Shell" "Scripting")
+echo ${array[@]}
+echo ${!array[@]}
+
+--------------------------------------------------------
